@@ -1,4 +1,5 @@
 $scope.nome = function(param){
+	console.log('Mensagem');
 	return param
 };
 $scope.sobrenome = function(param){
