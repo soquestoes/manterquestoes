@@ -1,3 +1,3 @@
 $scope.nome = function(param){
-	return param
+	return param + ' teste'
 };
