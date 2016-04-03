@@ -1,0 +1,31 @@
+
+
+<ion-view title="Só Questões Simulados & Provas">        
+
+    <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+     <ion-header-bar class="bar-positive">
+        <h1 class="title">Questões</h1>      
+    <div class="buttons">
+ <button item-right ng-click="frmHome.openModalNovaQuestao()" 
+        class="button button-icon icon ion-ios-plus-outline"></button>
+ <button class="button button-icon icon ion-ios-minus-outline" 
+         ng-click="showDelete = !showDelete"></button>       
+        </div>
+  </ion-header-bar>
+ 
+
+          <ion-list show-delete="showDelete">
+            <ion-item data-ng-repeat="questao in questoes"
+            item-height="45px" style="cursor:pointer"
+            data-ng-click="frmHome.editarQuestao(questao)">
+                  <ion-delete-button class="ion-minus-circled"
+                  ng-click="frmHome.removerQuestao(questao)"></ion-delete-button>
+                  {{ questao.texto }}
+            </ion-item>
+            </ion-list>
+          
+        </ion-content>
+</ion-view>
