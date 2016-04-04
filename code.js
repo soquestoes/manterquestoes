@@ -1,16 +1,16 @@
 //Esta função retorna o primeiro nome da pessoa
-//Serviço de Dados: FIREBASE
+//Serviço de Dados: *********
 $scope.nome = function(param){
 	f = function(param){
-		return processarNomeUsandoFIREBASE(param)
+		return processarNome(param)
 	};
 	return f
 };
 //Esta função retorna o sobrenome da pessoa
-//Serviço de Dados: FIREBASE
+//Serviço de Dados: *********
 $scope.sobrenome = function(param){
 	f = function(param){
-		return processarSobrenomeUsandoFIREBASE(param)
+		return processarSobrenome(param)
 	};
 	return f
 };
