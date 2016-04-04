@@ -7,6 +7,12 @@ $scope.sobrenome = function(param){
 	return param
 };
 
+//Esta função retorna o endereço da pessoa
+$scope.endereco = function(param){
+	return param
+};
+
+
 //Esta função retorna o nome completo da pessoa:
 //         nome + sobrenome
 $scope.nomeCompleto = function(param1, param2){
@@ -15,3 +21,4 @@ $scope.nomeCompleto = function(param1, param2){
 
 //Esta variável recebe o retorno da função nomeCompleto
 var nomePessoa = $scope.nomeCompleto('João', 'Silveira');
+var contatoCompleto = nomePessoa + ' ' + $scope.endereço('Brasília');
