@@ -2,6 +2,12 @@
 $scope.nome = function(param){
 	return param
 };
+
+//Esta função retorna o nome do meio da pessoa
+$scope.nomeMeio = function(param){
+	return param
+};
+
 //Esta função retorna o sobrenome da pessoa
 $scope.sobrenome = function(param){
 	return param
@@ -9,9 +15,9 @@ $scope.sobrenome = function(param){
 
 //Esta função retorna o nome completo da pessoa:
 //         nome + sobrenome
-$scope.nomeCompleto = function(param1, param2){
-	return $scope.nome(param1) + ' ' + $scope.sobrenome(param2);
+$scope.nomeCompleto = function(param1, param2, param 3){
+	return $scope.nome(param1) + ' ' + $scope.nomeMeio(param2) + ' ' + $scope.sobrenome(param3);
 };
 
 //Esta variável recebe o retorno da função nomeCompleto
-var nomePessoa = $scope.nomeCompleto('João', 'Silveira');
+var nomePessoa = $scope.nomeCompleto('João', 'da', 'Silveira');
