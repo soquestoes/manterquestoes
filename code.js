@@ -1,17 +1,19 @@
 //Esta função retorna o primeiro nome da pessoa
+//Serviço de Dados: FIREBASE
 $scope.nome = function(param){
-	return param
+	f = function(param){
+		return processarNomeUsandoFIREBASE(param)
+	};
+	return f
 };
 //Esta função retorna o sobrenome da pessoa
+//Serviço de Dados: FIREBASE
 $scope.sobrenome = function(param){
-	return param
+	f = function(param){
+		return processarSobrenomeUsandoFIREBASE(param)
+	};
+	return f
 };
-
-//Esta função retorna o endereço da pessoa
-$scope.endereco = function(param){
-	return param
-};
-
 
 //Esta função retorna o nome completo da pessoa:
 //         nome + sobrenome
@@ -21,4 +23,3 @@ $scope.nomeCompleto = function(param1, param2){
 
 //Esta variável recebe o retorno da função nomeCompleto
 var nomePessoa = $scope.nomeCompleto('João', 'Silveira');
-var contatoCompleto = nomePessoa + ' ' + $scope.endereço('Brasília');
