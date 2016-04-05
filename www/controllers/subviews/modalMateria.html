@@ -1,0 +1,28 @@
+  <ion-modal-view>
+  <ion-header-bar class="bar-positive">
+        <h1 class="title">{{modalMateria.acao}}</h1>   
+    </ion-header-bar>
+   <ion-content overflow-scroll="true" padding="true" class="card" data-ng-controller="modalMateriaController">
+        <h4>Título da matéria</h4>
+        <form class="list">
+            <label class="item item-input">
+                <textarea placeholder="Digite o título da matéria" data-ng-model="modalMateria.data.materia.titulo"> </textarea>
+            </label>
+        </form>
+ 
+
+
+        <button  style="border-radius:10px 10px 10px 10px;" 
+        data-ng-if="modalMateria.data.materia.titulo && !modalMateria.data.materia.id"
+        data-ng-click="modalMateria.adicionarMateria()"
+        class="button button-balanced ">Adicionar Matéria!</button>
+        
+          <button  style="border-radius:10px 10px 10px 10px;" 
+        data-ng-if="modalMateria.data.materia.titulo && modalMateria.data.materia.id"
+        data-ng-click="modalMateria.atualizarMateria(modalMateria.data.materia)"
+        class="button button-positive ">Atualizar Matéria!</button>
+          
+          <button data-ng-click="modalMateria.closeModal()" style="float:right"
+        class="button button-stable">Cancelar</button>
+    </ion-content>
+  </ion-modal-view>

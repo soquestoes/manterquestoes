@@ -8,12 +8,12 @@ angular.module('App').controller('changepasswordController',
   $scope.changepassword = function(user) {
     if(angular.isDefined(user)){
     utilityService.show();
-    authorizationService.register(user)
+    authorizationService.changePassword(user)
       .then(function() {
          utilityService.hide();
         // console.log("Antes de loguear:" + JSON.stringify(user));
-         utilityService.alertshow("Sucesso","O usuário foi criado corretamente.");
-         $location.path('/');
+         utilityService.alertshow("Sucesso","A senha foi alterada corretamente.");
+         $location.path('/app/questoes');
       }, function(err) {
          utilityService.hide();
          utilityService.errMessage(err);

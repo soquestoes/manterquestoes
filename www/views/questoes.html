@@ -6,7 +6,7 @@
     <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-     <ion-header-bar class="bar-positive">
+     <ion-header-bar class="bar-positive" style="margin-bottom:10px">
         <h1 class="title">Questões</h1>      
     <div class="buttons">
  <button item-right ng-click="frmHome.openModalNovaQuestao()" 
@@ -15,9 +15,9 @@
          ng-click="showDelete = !showDelete"></button>       
         </div>
   </ion-header-bar>
- 
-
-          <ion-list show-delete="showDelete">
+<br/>
+<br/>
+          <ion-list show-delete="showDelete" style="margin-top:10px">
             <ion-item data-ng-repeat="questao in questoes"
             item-height="45px" style="cursor:pointer"
             data-ng-click="frmHome.editarQuestao(questao)">

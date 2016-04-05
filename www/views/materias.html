@@ -1,8 +1,32 @@
-<ion-view title="Matérias">
-  <ion-nav-buttons side="right">
-    <button menu-toggle="right"class="button button-icon icon ion-navicon"></button>
+
+
+<ion-view title="Só Questões Simulados & Provas">        
+
+    <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <h1>Matérias</h1>
-  </ion-content>
+     <ion-header-bar class="bar-positive">
+        <h1 class="title">Matérias</h1>      
+    <div class="buttons">
+ <button item-right ng-click="frmHome.openModalNovaMateria()" 
+        class="button button-icon icon ion-ios-plus-outline"></button>
+ <button class="button button-icon icon ion-ios-minus-outline" 
+         ng-click="showDelete = !showDelete"></button>       
+        </div>
+  </ion-header-bar>
+ <br/>
+<br/>
+
+          <ion-list show-delete="showDelete">
+            <ion-item data-ng-repeat="materia in materias"
+            item-height="45px" style="cursor:pointer"
+            data-ng-click="frmHome.editarMateria(materia)">
+                  <ion-delete-button class="ion-minus-circled"
+                  ng-click="frmHome.removerMateria(materia)"></ion-delete-button>
+                  {{ materia.titulo }}
+            </ion-item>
+            </ion-list>
+          
+        </ion-content>
 </ion-view>

@@ -2,9 +2,6 @@
 angular.module('App').controller('questoesController', 
     function ($scope, $state, $localStorage, $location,$ionicPopup, 
                                 $firebaseObject, questoesService,$ionicModal) {
-  // LISTA DE OPCOES QUE DEVEM SER ADICONADAS NA QUESTAO SE FOR DO TIPO OPCOES MULTIPLAS OU UNICA
-
-  
 
   $scope.frmHome={};
   // MODAL DA QUESTAO
