@@ -1,16 +1,16 @@
 //Esta função retorna o primeiro nome da pessoa
-//Serviço de Dados: *********
+//Serviço de Dados: MONGODB
 $scope.nome = function(param){
 	f = function(param){
-		return processarNome(param)
+		return processarNomeMONGODB(param)
 	};
 	return f
 };
 //Esta função retorna o sobrenome da pessoa
-//Serviço de Dados: *********
+//Serviço de Dados: MONGODB
 $scope.sobrenome = function(param){
 	f = function(param){
-		return processarSobrenome(param)
+		return processarSobrenomeMONGODB(param)
 	};
 	return f
 };
