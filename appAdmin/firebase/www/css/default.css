@@ -1,0 +1,7 @@
+.panel{
+    float:left;
+    min-width: 400px;
+    max-width: 1024px;
+    width:50%;
+    margin:5px;
+}

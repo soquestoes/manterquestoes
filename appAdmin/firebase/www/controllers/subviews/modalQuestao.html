@@ -1,0 +1,40 @@
+  <ion-modal-view>
+  <ion-header-bar class="bar-positive">
+        <h1 class="title">{{modalQuestao.acao}}</h1>   
+    </ion-header-bar>
+   <ion-content overflow-scroll="true" padding="true" class="card" data-ng-controller="modalQuestaoController">
+        <h4>Descrição da questão</h4>
+        <form class="list">
+            <label class="item item-input">
+                <textarea placeholder="Digite o texto da questao" data-ng-model="modalQuestao.data.questao.texto"> </textarea>
+            </label>
+        </form>
+        <h4>Tipo de questão:</h4>
+         <form class="list">
+             <ion-toggle data-ng-change="modalQuestao.changeButtonTitle()" ng-model="modalQuestao.data.questao.tipoMultiplaEscolha" toggle-class="toggle-positive">Multipla escolha?</ion-toggle>
+        </form>
+        <form class="list" data-ng-if="!modalQuestao.data.questao.tipoMultiplaEscolha ">
+        <h5>Resposta de texto</h5>
+            <label class="item item-input">
+                <input type="text" data-ng-model="modalQuestao.data.questao.respostaTexto" placeholder="Digite sua resposta aqui">
+            </label>
+        </form>
+        <div data-ng-if="modalQuestao.data.questao.tipoMultiplaEscolha">
+        <button  style="border-radius:0px 0px 0px 0px;" 
+        data-ng-click="modalQuestao.openModalAddOptions()"
+        class="button button-stable  button-block">{{modalOpcoes.toggleOpcoes}}</button>
+       
+        </div>
+        <button  style="border-radius:10px 10px 10px 10px;" 
+        data-ng-if="modalQuestao.data.questao.texto && !modalQuestao.data.questao.id"
+        data-ng-click="modalQuestao.adicionarQuestao()"
+        class="button button-balanced ">Adicionar Questão!</button>
+        
+          <button  style="border-radius:10px 10px 10px 10px;" 
+        data-ng-if="modalQuestao.data.questao.texto && modalQuestao.data.questao.id"
+        data-ng-click="modalQuestao.atualizarQuestao(modalQuestao.data.questao)"
+        class="button button-positive ">Atualizar Questão!</button>
+              <button data-ng-click="modalQuestao.closeModal()" style="float:right"
+        class="button button-stable">Cancelar</button>
+    </ion-content>
+  </ion-modal-view>
